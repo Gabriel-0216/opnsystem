@@ -1,0 +1,50 @@
+<div class="card rounded shadow-sm">
+  <form class="row g-3" [formGroup]="form">
+    <div class="p-3">
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label>Nome colaborador</label>
+          <input type="text" class="form-control" formControlName="nomeColaborador"
+            placeholder="Insira o nome do colaborador">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label>Descrição</label>
+          <input type="textarea" class="form-control" formControlName="descricao" placeholder="Descrição da sugestão">
+
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label>Justificativa</label>
+          <input type="textarea" class="form-control" formControlName="justificativa"
+            placeholder="Insira a justificativa da sugestão.">
+        </div>
+      </div>
+      <div class="form-row">
+<div class="form-group col-md-12">
+  <label>
+    Departamento
+  </label>
+  <select class="form-control" formControlName="departamentoId">
+    <option *ngFor="let departamento of departamentos" [ngValue]="departamento.id">
+      {{departamento.nome}}
+    </option>
+  </select>
+</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="d-flex">
+        <button class="btn btn-outline-secondary mr-auto border" (click)="resetForm()">
+          Cancelar Alteração
+        </button>
+        <button class="btn btn-success" (click)="salvarSugestao()" [disabled]="!form.valid">
+          <span></span>
+          Salvar departamento
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

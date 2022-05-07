@@ -1,0 +1,77 @@
+
+
+<div class="card rounded shadow-sm p-3">
+<div class="d-flex">
+  <div class="flex-fill pr-3">
+    <div class="form-group mb-2">
+      <div class="input-group-prepend">
+        <label class="input-group-text">
+            Filtrar por departamento.
+        </label>
+        <select class="form-control" [(ngModel)]="departamentoFiltro">
+          <option [ngValue]="0"></option>
+          <option *ngFor="let departamento of departamentos" [ngValue]="departamento.id">
+            {{departamento.nome}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Nome colaborador
+      </th>
+      <th>
+        Justificativa
+      </th>
+      <th>
+        Sugestão
+      </th>
+      <th>
+        Nome departamento
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sugestao of sugestoesFiltrado">
+      <td>
+        {{sugestao.id}}
+      </td>
+      <td>
+        {{sugestao.nomeColaborador}}
+      </td>
+      <td>
+        {{sugestao.descricao}}
+      </td>
+      <td>
+        {{sugestao.justificativa}}
+      </td>
+      <td>
+        {{sugestao.departamento.nome}}
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="8">
+        <b>Quantidade de sugestões retornados: {{sugestoesFiltrado.length}}</b>
+      </td>
+    </tr>
+  </tfoot>
+</table>
