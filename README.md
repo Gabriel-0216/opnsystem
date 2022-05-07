@@ -1,6 +1,6 @@
 ## rodando a aplicação
 #### projeto dotnet:
-#### 1. configurar a connection string do banco de dados no projeto: Dominio/DAL/Contexot/AppDbContext.cs
+#### 1. configurar a connection string do banco de dados no projeto: Dominio/DAL/Contexto/AppDbContext.cs
 #### 2. adicionar a migration com o EF Core
 #### 3. aplicar a migration no banco
 #### 4. rodar a aplicação
