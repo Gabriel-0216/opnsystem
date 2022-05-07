@@ -31,9 +31,7 @@ public class DeletarDepartamentoHandler : IRequestHandler<DeletarDepartamentoReq
             return resposta;
         }
 
-
-        var deleted = await _departamentoRepositorio.Delete(departamento);
-        if (deleted) return resposta;
+        if (await _departamentoRepositorio.Delete(departamento)) return resposta;
         
         resposta.AdicionarErro("Erro interno do servidor.");
         return resposta;

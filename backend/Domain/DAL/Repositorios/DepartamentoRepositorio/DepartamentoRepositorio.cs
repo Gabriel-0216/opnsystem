@@ -16,14 +16,30 @@ public class DepartamentoRepositorio : IDepartamentoRepositorio
 
     public async Task<bool> Add(Departamento entity)
     {
-        await _context.AddAsync(entity);
-        return await _context.SaveChangesAsync() > 0;
+        try
+        {
+            await _context.AddAsync(entity);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+        catch (SqlException)
+        {
+            return false;
+        }
     }
 
     public async Task<bool> Update(Departamento entity)
     {
-        _context.Update(entity);
-        return await _context.SaveChangesAsync() > 0;
+        try
+        {
+            _context.Update(entity);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+        catch (SqlException)
+        {
+            return false;
+        }
     }
 
     public async Task<bool> Delete(Departamento entity)

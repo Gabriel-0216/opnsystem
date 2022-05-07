@@ -1,5 +1,6 @@
 ﻿using Dominio.DAL.Contexto;
 using Dominio.Entidades;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dominio.DAL.Repositorios.SugestoesRepositorio
@@ -15,20 +16,44 @@ namespace Dominio.DAL.Repositorios.SugestoesRepositorio
 
         public async Task<bool> Add(Sugestao entity)
         {
-            await _context.AddAsync(entity);
-            return await _context.SaveChangesAsync() > 0;
+            try
+            {
+                await _context.AddAsync(entity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
         }
 
         public async Task<bool> Delete(Sugestao entity)
         {
-            _context.Remove(entity);
-            return await _context.SaveChangesAsync() > 0;
+            try
+            {
+                _context.Remove(entity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
         }
 
         public async Task<bool> Update(Sugestao entity)
         {
-            _context.Update(entity);
-            return await _context.SaveChangesAsync() > 0;
+            try
+            {
+                _context.Update(entity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
         }
         public async Task<IEnumerable<Sugestao>> GetAll(bool incluirDepartamento = false)
         {

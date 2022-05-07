@@ -25,17 +25,11 @@ public class CriarDepartamentoHandler : IRequestHandler<CriarDepartamentoRequisi
            resposta.AdicionarErros(departamento.RetornarNotificacoesString());
            return resposta;
         }
+        if (await _departamentoRepositorio.Add(departamento)) return resposta;
 
-        try
-        {
-            await _departamentoRepositorio.Add(departamento);
-            return resposta;
-        }
-        catch (SqlException ex)
-        {
-            resposta.AdicionarErro("Erro interno do servidor.");
-            return resposta;
-        }
+        resposta.AdicionarErro("erro interno do servidor.");
+        return resposta;
+  
         
     }
 }
