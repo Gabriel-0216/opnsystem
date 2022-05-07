@@ -1,6 +1,3 @@
-# opnsystem
-opnsystem
-
 ## rodando a aplicação
 #### projeto dotnet:
 #### 1. configurar a connection string do banco de dados no projeto: Dominio/DAL/Contexot/AppDbContext.cs
