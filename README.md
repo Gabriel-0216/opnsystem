@@ -7,6 +7,6 @@
 
 
 #### projeto angular:
-#### 1. abrir a no terminal e rodar o comando npm install
+#### 1. abrir a pasta raíz no terminal e rodar o comando npm install
 #### 2. caso necessário parametrizar as rotas da Api nos services de Departamento e Sugestões
 #### 3. rodar a aplicação
