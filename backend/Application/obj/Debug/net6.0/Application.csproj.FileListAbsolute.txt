@@ -1,0 +1,15 @@
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\bin\Debug\net6.0\Application.deps.json
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\bin\Debug\net6.0\Application.dll
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\bin\Debug\net6.0\Application.pdb
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\bin\Debug\net6.0\Dominio.dll
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\bin\Debug\net6.0\Dominio.pdb
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\Application.dll
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\refint\Application.dll
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\Application.pdb
+C:\Users\GABRI\source\nascimento.software\Sistemas\OpenSystem\Application\obj\Debug\net6.0\ref\Application.dll
